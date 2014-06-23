@@ -1,4 +1,35 @@
-$body-bg:     #34495e;
-$navbar-default-bg:      #bdc3c7;
-$navbar-default-link-color:  white;
+@import url(http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco);
+$font-family-sans-serif:     'Sue Ellen Francisco';
+$body-bg:     #16a085;
+$navbar-default-bg:      #1abc9c;
+$navbar-default-link-color:  Black;
+
+
+
 @import 'bootstrap';
+
+.center {
+	text-align: center;
+}
+.navbar-brand {
+	font-weight: bold;
+}
+
+.btn-primary {
+	background-color: #1abc9c;
+}
+
+.About {
+	color: white;
+}
+
+.AboutText {
+	color: white;
+	font-family: Arial;
+}
+
+.List {
+	font-family: Arial;
+	font-size: 15px;
+	color: white;
+}
