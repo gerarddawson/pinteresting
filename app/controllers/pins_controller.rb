@@ -1,7 +1,7 @@
 class PinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :current_user, only: [:edit, :update, :destroy]
 
   def index
     @pins = Pin.all
@@ -9,6 +9,7 @@ class PinsController < ApplicationController
 
 
   def show
+    @pin = Pin.find(params[:id])
   end
 
   def new
@@ -46,8 +47,8 @@ class PinsController < ApplicationController
       @pin = Pin.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+  
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :image)
     end
 end
